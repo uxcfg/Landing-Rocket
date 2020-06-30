@@ -1,0 +1,53 @@
+@import url('header.css');
+@import url('main.css');
+@import url('modal.css');
+
+:root {
+	--darkgray: #212329;
+	--lightgray: #b1b1b1;
+	--red: #f9423d;
+	--white: #fff;
+	--ligthred: #f9433dcc;
+	--ligthblue: #337AF1;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+input,
+a,
+button { 
+	font: inherit;
+}
+
+
+
+body {
+	font-family: 'Nunito', sans-serif;
+	font-size: 15px;
+	line-height: 1.5;
+}
+
+.container {
+	width: 100%;
+	max-width: 1170px;
+
+	margin: 0 auto;
+	padding: 0 15px;
+}
+

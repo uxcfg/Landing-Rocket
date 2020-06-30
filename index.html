@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>Luxco</title>
+	</head>
+	<body>
+		<!-- Header -->
+		<header class="header">
+			<div class="container">
+				<div class="header_inner">
+					<div class="header_logo">LUXCO</div>
+					<div class="menu_toggle" id="mobile_menu">
+						<div class="bar"></div>
+						<div class="bar"></div>
+						<div class="bar"></div>
+					</div>
+
+					<nav class="nav" id="nav_mobile">
+						<div class="nav_link"><a href="#">Home</a></div>
+						<div class="nav_link"><a href="#">Services</a></div>
+						<div class="nav_link"><a href="#">About Us</a></div>
+						<div class="nav_link"><a href="#">Contact Us</a></div>
+						<div class="nav_link nav_link_btn"><a href="#">Sign Up</a></div>
+					</nav>
+				</div>
+				<!-- /.header_inner -->
+			</div>
+			<!-- /.container -->
+		</header>
+
+		<main class="main">
+			<div class="container">
+				<div class="main_inner">
+					<div class="main_content">
+						<h1 class="main_title">
+							Skyrocket
+						</h1>
+
+						<p class="main_text">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt,
+							dignissimos quod.
+						</p>
+
+						<div class="main_btn">
+							<a href="#">Get Started</a>
+						</div>
+					</div>
+
+					<div class="main_img_inner">
+						<img class="main_img" src="img/Rocket.svg" alt="" />
+					</div>
+				</div>
+				<!-- /.main_inner -->
+			</div>
+			<!-- /.container -->
+		</main>
+
+		<!-- Modal Window
+		================== -->
+		<div class="modal" id="modal_email">
+			<div class="modal_content">
+				<span class="close_btn">&times;</span>
+				<div class="modal_content-left">
+					<img class="modal_img" src="img/Modal-left.svg" alt="" />
+				</div>
+
+				<div class="modal_content-right">
+					<form class="modal_form" id="form" action="/" method="GET">
+						<h1 class="modal_title">
+							Welcome! Create your account by filling out the information below.
+						</h1>
+
+						<div class="form_auth">
+							<div class="form_group">
+								<input
+									class="form_input"
+									id="name"
+									type="text"
+									name="name"
+									placeholder="Enter your name"
+								/>
+								<p class='form_error'>Error message</p>
+							</div>
+							<div class="form_group">
+								<input
+									class="form_input"
+									id="email"
+									type="email"
+									name="email"
+									placeholder="Enter your email"
+								/>
+								<p class='form_error'>Error message</p>
+							</div>
+							<div class="form_group">
+								<input
+									class="form_input"
+									id="password"
+									type="password"
+									name="password"
+									placeholder="Enter your password"
+								/>
+								<p class='form_error'>Error message</p>
+							</div>
+							<div class="form_group">
+								<input
+									class="form_input"
+									id="password_confirm"
+									type="password"
+									name="password"
+									placeholder="Confirm your password"
+								/>
+								<p class='form_error'>Error message</p>
+							</div>
+							<div class="form_group">
+								<button class="form_input form_btn" type="submit">Sign Up</button>
+							</div>
+
+							<span class="form_login"
+								>Already have an account? Login <a href="#">here</a></span
+							>
+						</div>
+						<!-- /.form_auth -->
+					</form>
+				</div>
+				<!-- /.modal_contetnt-right -->
+			</div>
+		</div>
+
+		<script src="main.js"></script>
+	</body>
+</html>
