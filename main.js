@@ -98,3 +98,79 @@ form.addEventListener('submit', function (e) {
 	checkedLength(confirm, 8, 25);
 	checkedSamePassword(password, confirm);
 });
+
+/* Image Gallery 
+==============*/
+
+let collectionImages = document.querySelectorAll('.service__item');
+let lastOpened;
+let wWidth = window.innerWidth;
+
+collectionImages.forEach((img, i) => {
+	img.addEventListener('click', function () {
+		lastOpened = i + 1;
+
+		let container = document.body;
+		let newImg = document.createElement('div');
+
+		container.appendChild(newImg);
+		newImg.classList.add('img_window');
+		newImg.setAttribute('onclick', 'closeImg()');
+
+		let saveImg = img.firstElementChild.cloneNode();
+		newImg.appendChild(saveImg);
+		saveImg.classList.remove('service__item_img');
+		saveImg.classList.add('popup_img');
+		saveImg.setAttribute('id', 'cur_img');
+
+		saveImg.onload = function () {
+			let nextBtn = document.createElement('a');
+			nextBtn.innerHTML = '<i class="fas fa-arrow-circle-right"></i>';
+			nextBtn.classList.add('next_btn');
+			nextBtn.setAttribute('onclick', 'changeImg(1)');
+
+			let preBtn = document.createElement('a');
+			preBtn.innerHTML = '<i class="fas fa-arrow-circle-left"></i>';
+			preBtn.classList.add('pre_btn');
+			preBtn.setAttribute('onclick', 'changeImg(0)');
+
+			container.appendChild(nextBtn);
+			container.appendChild(preBtn);
+		};
+	});
+});
+
+function closeImg() {
+	document.querySelector('.img_window').remove();
+	document.querySelector('.next_btn').remove();
+	document.querySelector('.pre_btn').remove();
+}
+
+function changeImg(el) {
+	document.querySelector('#cur_img').remove();
+
+	let imgWind = document.querySelector('.img_window');
+	let newImg = document.createElement('img');
+
+	imgWind.appendChild(newImg);
+
+	let calcImg;
+
+	if (el === 1) {
+		calcImg = lastOpened + 1;
+		if (calcImg > collectionImages.length) {
+			calcImg = 1;
+		}
+	} else if (el === 0) {
+		calcImg = lastOpened - 1;
+		if (calcImg < 1) {
+			calcImg = collectionImages.length;
+		}
+	}
+
+	newImg.setAttribute('src', 'img/gallery/img' + calcImg + '.jpg');
+	newImg.classList.add('popup_img');
+	newImg.setAttribute('id', 'cur_img');
+
+	lastOpened = calcImg;
+}

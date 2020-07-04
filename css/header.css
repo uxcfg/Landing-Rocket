@@ -12,6 +12,8 @@
 	align-items: center;
 
 	background-color: var(--darkgray);
+
+	z-index: 100;
 }
 
 .header_inner {
